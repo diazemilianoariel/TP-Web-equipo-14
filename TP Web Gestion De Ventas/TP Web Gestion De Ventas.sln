@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP Web Gestion De Ventas", "TP Web Gestion De Ventas\TP Web Gestion De Ventas.csproj", "{C649C832-16C7-4978-BE8C-6D165DDA0308}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{AE42E3C3-49AE-4ADB-8D90-EDF3EE8AC3FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C649C832-16C7-4978-BE8C-6D165DDA0308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C649C832-16C7-4978-BE8C-6D165DDA0308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C649C832-16C7-4978-BE8C-6D165DDA0308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE42E3C3-49AE-4ADB-8D90-EDF3EE8AC3FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE42E3C3-49AE-4ADB-8D90-EDF3EE8AC3FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE42E3C3-49AE-4ADB-8D90-EDF3EE8AC3FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE42E3C3-49AE-4ADB-8D90-EDF3EE8AC3FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
