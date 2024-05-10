@@ -129,6 +129,16 @@
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="DataManager\DataManager.csproj">
+      <Project>{389cc519-ed4e-4dd4-b32b-82bd7799b574}</Project>
+      <Name>DataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="Dominio\Dominio.csproj">
+      <Project>{3c70c084-2ab4-4c42-ba67-a8dec9fbb22f}</Project>
+      <Name>Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
