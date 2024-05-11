@@ -7,4 +7,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Menu Inicio </h1>
     <h2>aca es la pagina principal.....</h2>
+
+
 </asp:Content>

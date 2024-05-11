@@ -32,6 +32,12 @@ namespace DataManager
             comando.CommandText= query;
         }
 
+        public void setearProcedimiento(string sp)
+        {
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandText= sp;
+        }
+
         public void EjecutarLectura()
         {
             comando.Connection= conexion;
