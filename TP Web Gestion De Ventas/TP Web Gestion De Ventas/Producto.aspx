@@ -27,7 +27,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><%#Eval("nombre") %></h5>
                     <p class="card-text"><%#Eval("descripcion") %></p>
-                    <%--<a href=""></a>--%> <!--ACA VA UN LINK!!! -->
+                    <a href="DetalleProducto.aspx">Detalles</a> <!--ACA VA UN LINK!!! -->
                 </div>
             </div>
         </div>
