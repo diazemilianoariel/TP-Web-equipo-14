@@ -17,8 +17,8 @@ namespace DataManager
             {
                 //datos.SetearConsulta("SELECT ARTICULOS.Id AS Id,ARTICULOS.Codigo AS Codigo,ARTICULOS.Nombre AS Nombre,ARTICULOS.Descripcion AS Descripcion,Articulos.Precio AS Precio,MARCAS.Descripcion AS Marca,CATEGORIAS.Descripcion AS Categoria,IMAGENES.ImagenUrl AS ImagenUrl FROM ARTICULOS INNER JOIN MARCAS ON MARCAS.Id=ARTICULOS.IdMarca INNER JOIN CATEGORIAS ON CATEGORIAS.Id=ARTICULOS.IdCategoria INNER JOIN IMAGENES ON IMAGENES.IdArticulo=ARTICULOS.Id");
                 //query piola?
-                //datos.SetearConsulta("SELECT ARTICULOS.Id AS Id,ARTICULOS.Codigo AS Codigo,ARTICULOS.Nombre AS Nombre ,ARTICULOS.Descripcion AS Descripcion,Articulos.Precio AS Precio,MARCAS.Descripcion AS Marca,CATEGORIAS.Descripcion AS Categoria,IMAGENES.ImagenUrl  AS ImagenUrl FROM ARTICULOS, MARCAS,CATEGORIAS,IMAGENES WHERE ARTICULOS.IdCategoria=CATEGORIAS.Id and ARTICULOS.IdMarca=MARCAS.Id and ARTICULOS.id=IMAGENES.IdArticulo");
-                datos.setearProcedimiento("storedListar");
+                datos.SetearConsulta("SELECT ARTICULOS.Id AS Id,ARTICULOS.Codigo AS Codigo,ARTICULOS.Nombre AS Nombre ,ARTICULOS.Descripcion AS Descripcion,Articulos.Precio AS Precio,MARCAS.Descripcion AS Marca,CATEGORIAS.Descripcion AS Categoria,IMAGENES.ImagenUrl  AS ImagenUrl FROM ARTICULOS, MARCAS,CATEGORIAS,IMAGENES WHERE ARTICULOS.IdCategoria=CATEGORIAS.Id and ARTICULOS.IdMarca=MARCAS.Id and ARTICULOS.id=IMAGENES.IdArticulo");
+                //datos.setearProcedimiento("storedListar");
                 
                 datos.EjecutarLectura();
 
