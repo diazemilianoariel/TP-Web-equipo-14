@@ -14,6 +14,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">PRODUCTOS</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Celulares</a></li>
+                    <li><a class="dropdown-item" href="#">Televisores</a></li>
+                    <li><a class="dropdown-item" href="#">Otros</a></li>
+                    
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">VER CARRITO</a>
+            </li>
+        </ul>
+        //
         <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
             <div class="container-fluid">
                 <a class="navbar-brand" href="Carrito.aspx"><i class="bi bi-cart-check-fill fs-2" style="color: firebrick"></i></a>
@@ -33,6 +54,7 @@
                 </div>
             </div>
         </nav>
+        //
         <div class="container">
             <hr />
             <div>

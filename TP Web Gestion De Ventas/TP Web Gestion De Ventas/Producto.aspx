@@ -8,8 +8,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <h1>Menu Productos </h1>
-    <h2>aca van los productos.....</h2>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <%--<div class="col">
