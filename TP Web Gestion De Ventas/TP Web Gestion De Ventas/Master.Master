@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Proyecto carrito blablabla</title>
+    <title>Proyecto carrito </title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -16,45 +16,26 @@
     <form id="form1" runat="server">
         <ul class="nav nav-pills">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                <a class="nav-link active" aria-current="page" href="Default.aspx">INICIO</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">PRODUCTOS</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Celulares</a></li>
+                    <li><a class="dropdown-item" href="Producto.aspx">Celulares</a></li>
                     <li><a class="dropdown-item" href="#">Televisores</a></li>
                     <li><a class="dropdown-item" href="#">Otros</a></li>
                     
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sobre Nosotros</a>
+                <a class="nav-link" href="Nosotros.aspx">Sobre Nosotros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">VER CARRITO</a>
+                <a class="nav-link active" aria-current="page" href="Default.aspx">VER CARRITO</a>
             </li>
         </ul>
-        //
-        <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="Carrito.aspx"><i class="bi bi-cart-check-fill fs-2" style="color: firebrick"></i></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarsExample02">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="Default.aspx">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Producto.aspx">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Nosotros.aspx">Sobre nosotros</a></li>
-                    </ul>
-                    <div>
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                </div>
-            </div>
-        </nav>
-        //
+     
+        
         <div class="container">
             <hr />
             <div>
@@ -63,5 +44,8 @@
             </div>
         </div>
     </form>
+    <footer>
+    <p>&copy;<%:DateTime.Now.Year %>- WEB DE MARTIN, GONZALO Y EMILIANO</p>
+</footer>
 </body>
 </html>
