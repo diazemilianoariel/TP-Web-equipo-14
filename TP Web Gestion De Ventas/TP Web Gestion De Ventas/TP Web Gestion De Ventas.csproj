@@ -72,7 +72,6 @@
     <Content Include="DetalleProducto.aspx" />
     <Content Include="estilos1.css" />
     <Content Include="Global.asax" />
-    <Content Include="Nosotros.aspx" />
     <Content Include="Producto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -107,13 +106,6 @@
     </Compile>
     <Compile Include="Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Nosotros.aspx.cs">
-      <DependentUpon>Nosotros.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Nosotros.aspx.designer.cs">
-      <DependentUpon>Nosotros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Producto.aspx.cs">
       <DependentUpon>Producto.aspx</DependentUpon>
