@@ -1,0 +1,22 @@
+﻿/*SECCION NAV*/
+
+/*SECCION FOOTER*/
+.footer {
+    background-color: #16202e;
+    text-align: center;
+    color: #fff;
+    padding: 1 px;
+    position: fixed;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+}
+
+/*SECCION INICIO - DEFAULT.ASPX*/
+.reflected-header {
+    text-align: center; /* Centra el texto */
+    padding: 60px 2; /* Agrega espacio alrededor del texto */
+    background-color: gray; /* Color de fondo */
+    border-bottom: 5px solid double; /* Línea inferior */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}

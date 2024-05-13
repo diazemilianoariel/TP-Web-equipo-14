@@ -13,10 +13,22 @@ namespace TP_Web_Gestion_De_Ventas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloManager articuloManager = new ArticuloManager();
-
-            gridViewArticulos.DataSource = articuloManager.Listar();
-            gridViewArticulos.DataBind();
+          
         }
+
+        
+
+        protected void btnConfirmarCompra_Click(object sender, EventArgs e)
+        {
+
+            Session.Remove("Seleccionados");
+
+            lblMensajeCompra.Text = "Muchas Gracias por su compra";
+            lblMensajeCompra.Visible = true;
+        }
+
+
+
+        
     }
 }

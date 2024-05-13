@@ -3,13 +3,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Aca se van a ver los productos agregados al carrito</h1>
-    <asp:GridView runat="server" ID="gridViewArticulos" CssClass="table table-bordered table-responsive table-secondary" AutoGenerateColumns="false">
-        <Columns>
-            <asp:BoundField HeaderText="ID" DataField="id"/>
-            <asp:BoundField HeaderText="Codigo" DataField="codigo"/>
-            <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
-            <asp:BoundField HeaderText="Precio" DataField="precio"/>
-        </Columns>
-    </asp:GridView>
+
+
+
+
+
+    <asp:Label runat="server" ID="lblTotalCarrito" Text="Total del Carrito: $ 0.00" />
+
+    </div>
+
+            <asp:Button ID="btnConfirmarCompra" runat="server" Text="Confirmar compra" OnClick="btnConfirmarCompra_Click" CssClass="btn btn-success" />
+
+    <p>
+        <asp:Label ID="lblMensajeCompra" runat="server" Text="" Visible="false"></asp:Label>
+    </p>
+  
+
+
+
+
+
+
 </asp:Content>
+
