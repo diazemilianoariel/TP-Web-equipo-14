@@ -1,5 +1,21 @@
 ﻿/*SECCION NAV*/
+#form1 {
+    text-align: left; /* Alinea el contenido del formulario a la izquierda */
+}
 
+.nav {
+    display: inline-block; /* Alinea los elementos de navegación en línea */
+}
+
+#searchInput,
+.contador,
+.logoCarrito {
+    float: left; /* Hace que los elementos floten hacia la izquierda */
+    margin-right: 10px; /* Añade un margen derecho para separar visualmente los elementos */
+}
+
+
+}
 /*SECCION FOOTER*/
 .footer {
     background-color: #16202e;
@@ -14,8 +30,8 @@
 }
 
 container {
-    min-height: 100vh; /* Establece la altura mínima del contenedor al 100% del viewport height */
-    position: relative; /* Establece la posición relativa para poder posicionar el footer correctamente */
+    min-height: 100vh; /*  altura del contenedor al 100% del viewport height */
+    position: relative; /* posición relativa para poder posicionar el footer correctamente */
 }
 
 /*SECCION INICIO - DEFAULT.ASPX*/

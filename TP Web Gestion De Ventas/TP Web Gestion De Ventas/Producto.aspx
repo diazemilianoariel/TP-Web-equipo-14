@@ -26,7 +26,7 @@
                                     <div class="mt-auto">
                                         <asp:Button ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CssClass="btn btn-primary mb-2" CommandArgument='<%# Eval("Id") %>' CommandName="ArticuloId" OnClientClick="actualizarContador(); return true;" Style="background-color: #007bff; color: white;" onmouseover="this.style.backgroundColor = '#a732da';" onmouseout="this.style.backgroundColor = '#007bff';" />
                                         <button class="btn-Ver-Detalle">
-                                            <a href='<%# "Detalle.aspx?id=" + Eval("Id") %>'>Detalle</a>
+                                            <a href='<%# "DetalleProducto.aspx?id=" + Eval("Id") %>'>Detalle</a>
                                         </button>
                                     </div>
                                 </div>
