@@ -3,35 +3,58 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
-
-
-
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap">
+    <link href="estilos1.css" rel="stylesheet" />
 
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <%--<div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>--%>
-        <asp:Repeater runat="server" ID="repRepetidor">
-            <ItemTemplate>
-                <div class="col">
-            <div class="card">
-                <img src="<%#Eval("ImagenUrl") %>" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><%#Eval("nombre") %></h5>
-                    <p class="card-text"><%#Eval("descripcion") %></p>
-                    <a href="DetalleProducto.aspx">Detalles</a> <!--ACA VA UN LINK!!! -->
-                </div>
+
+    <section class="body-def">
+        <div class="container">
+            <div class="row">
+
+                <asp:Repeater runat="server" ID="repRepetidor">
+                    <ItemTemplate>
+                        <div class="col-md-3 mb-4 article-card">
+                            <div class="card border border-dark font-weight-bold mx-auto h-100" style="width: 18rem;">
+                                <img class="card-img-top " src='<%# Eval("ImagenUrl") %>' alt="Card image cap" />
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title"><%# Eval("Nombre") %></h5>
+                                    <p class="card-text"><%# Eval("Descripcion") %></p>
+                                    <p class="card-text flex-grow-1"></p>
+                                    <p class="card-text">Precio: $ <%# string.Format("{0:0.00}", Eval("Precio")) %></p>
+                                    <div class="mt-auto">
+                                        <asp:Button ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CssClass="btn btn-primary mb-2" CommandArgument='<%# Eval("Id") %>' CommandName="ArticuloId" OnClientClick="actualizarContador(); return true;" Style="background-color: #007bff; color: white;" onmouseover="this.style.backgroundColor = '#a732da';" onmouseout="this.style.backgroundColor = '#007bff';" />
+                                        <button class="btn-Ver-Detalle">
+                                            <a href='<%# "Detalle.aspx?id=" + Eval("Id") %>'>Detalle</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+
             </div>
         </div>
-            </ItemTemplate> 
-        </asp:Repeater>
-    </div>
+
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function actualizarContador() {
+            $.ajax({
+                url: 'Default.aspx/ObtenerCantidadCarrito',
+                type: 'POST',
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (data) {
+
+                    contadorCarrito.textContent = data.d;
+                },
+
+            });
+        }
+    </script>
+
 </asp:Content>
