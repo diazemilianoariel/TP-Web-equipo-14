@@ -13,7 +13,9 @@ namespace TP_Web_Gestion_De_Ventas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            //prueba datos en session...
+            listaTotal.DataSource = Session["listaArticulos"];
+            listaTotal.DataBind();
         }
 
         

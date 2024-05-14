@@ -19,8 +19,8 @@ namespace TP_Web_Gestion_De_Ventas
             listaArticulos = articuloManager.Listar();
             repRepetidor.DataSource = listaArticulos;
             repRepetidor.DataBind();
-            
-            
+
+            Session.Add("listaArticulos", listaArticulos);
         }
     }
 }

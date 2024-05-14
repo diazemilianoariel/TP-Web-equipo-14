@@ -22,7 +22,8 @@ namespace DataManager
         //defino el constructor
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=MARTIN\\SQLEXPRESS02; database=CATALOGO_P3_DB; integrated security=true");
+            //VER CONEXION SERVER...
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
             comando = new SqlCommand();
         }
 

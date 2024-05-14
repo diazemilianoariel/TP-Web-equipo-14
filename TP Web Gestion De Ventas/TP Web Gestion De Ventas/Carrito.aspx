@@ -4,20 +4,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-
-
-
     <asp:Label runat="server" ID="lblTotalCarrito" Text="Total del Carrito: $ 0.00" />
-
-    </div>
-
-            <asp:Button ID="btnConfirmarCompra" runat="server" Text="Confirmar compra" OnClick="btnConfirmarCompra_Click" CssClass="btn btn-success" />
-
+    <asp:Button ID="btnConfirmarCompra" runat="server" Text="Confirmar compra" OnClick="btnConfirmarCompra_Click" CssClass="btn btn-success" />
     <p>
         <asp:Label ID="lblMensajeCompra" runat="server" Text="" Visible="false"></asp:Label>
     </p>
-  
+
+    
+    <asp:GridView ID="listaTotal" CssClass="table" runat="server"></asp:GridView>
 
 
 
