@@ -13,7 +13,24 @@ namespace TP_Web_Gestion_De_Ventas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            if (Session["Seleccionados"] != null)
+            {
+                List<Articulo> seleccionados = (List<Articulo>)Session["Seleccionados"];
+
+                if (!IsPostBack)
+                {
+                    repEliminar.DataSource = seleccionados;
+                    repEliminar.DataBind();
+
+
+                    
+                }
+
+            }
+
+
+
+
         }
 
         
