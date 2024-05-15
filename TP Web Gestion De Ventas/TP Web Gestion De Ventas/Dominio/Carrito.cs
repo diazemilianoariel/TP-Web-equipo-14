@@ -11,10 +11,12 @@ namespace Dominio
     {
         public Dictionary<int, int> items;  //el diccionario sera compuesto por: {id,cantidad ; id,cantidad}
         //public List<Articulo> articulos;
+        public int cant;
 
         public Carrito()    //instancio el diccionario de articulos para ir cargando...
         {
             items = new Dictionary<int, int>();
+            //cant = 0;
         }
 
         //metodo subtotal y total deben ir en la pagina del carrito para tener info de los articulos...
