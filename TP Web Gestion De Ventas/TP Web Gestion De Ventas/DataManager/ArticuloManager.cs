@@ -36,7 +36,11 @@ namespace DataManager
                     aux.categoria.descripcion = (string)datos.Lector["Categoria"];
 
                     if ( !(datos.Lector["ImagenUrl"] is DBNull))
+                    {
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+
+                    }
+                  
 
                     lista.Add(aux);
                 }
@@ -89,5 +93,8 @@ namespace DataManager
         {
 
         }
+
+
+
     }
 }

@@ -36,7 +36,7 @@
             
             <asp:Label CssClass="contador" ID="Label1" runat="server" Text="">0</asp:Label>
             <a class="logoCarrito" href="Carrito.aspx">
-                <img src="icoCarrito.png" alt="icono del carrito" />
+                <img src="IcoCarrito.png" alt="icono del carrito" Style =" height: 30px"/>
             </a>
             <li></li>
         </ul>
