@@ -11,26 +11,8 @@ namespace TP_Web_Gestion_De_Ventas
 {
 
 
-    public partial class Carrito
+    public partial class Pruebas
     {
-
-        /// <summary>
-        /// btnSumar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSumar;
-
-        /// <summary>
-        /// txtCantidad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
 
         /// <summary>
         /// btnRestar control.
@@ -42,21 +24,30 @@ namespace TP_Web_Gestion_De_Ventas
         protected global::System.Web.UI.WebControls.Button btnRestar;
 
         /// <summary>
-        /// btnBorrar control.
+        /// lblPrueba control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBorrar;
+        protected global::System.Web.UI.WebControls.Label lblPrueba;
 
         /// <summary>
-        /// Label1 control.
+        /// btnSumar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Button btnSumar;
+
+        /// <summary>
+        /// grdListaCompleta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdListaCompleta;
     }
 }

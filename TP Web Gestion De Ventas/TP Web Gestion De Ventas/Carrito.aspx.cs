@@ -14,24 +14,24 @@ namespace TP_Web_Gestion_De_Ventas
         protected void Page_Load(object sender, EventArgs e)
         {
             //prueba datos en session...
-            listaTotal.DataSource = Session["listaArticulos"];
-            listaTotal.DataBind();
+            //listaTotal.DataSource = Session["listaArticulos"];
+            //listaTotal.DataBind();
             if (!IsPostBack)
             {
                 // Cargar la cantidad inicial en el Label solo en la primera carga de la página
                 txtCantidad.Text = "primera carga...";
                 //lblCantidad.Text = "0";
             }
-            else
-            {
-                txtCantidad.Text = "porqueria...";
-            }
+            //else
+            //{
+            //    txtCantidad.Text = "porqueria...";
+            //}
             //int cantidad = 1;
             //lblCantidad.Text = cantidad.ToString();
         }
 
 
-
+        /*
         protected void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
 
@@ -40,7 +40,7 @@ namespace TP_Web_Gestion_De_Ventas
             lblMensajeCompra.Text = "Muchas Gracias por su compra";
             lblMensajeCompra.Visible = true;
         }
-
+        */
         protected void btnSumar_Click(object sender, EventArgs e)
         {
             int cant = int.Parse(txtCantidad.Text);
