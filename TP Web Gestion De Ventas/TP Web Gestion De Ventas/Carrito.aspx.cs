@@ -19,8 +19,8 @@ namespace TP_Web_Gestion_De_Ventas
 
                 if (!IsPostBack)
                 {
-                    repEliminar.DataSource = seleccionados;
-                    repEliminar.DataBind();
+                    repCarrito.DataSource = seleccionados;
+                    repCarrito.DataBind();
 
 
                     

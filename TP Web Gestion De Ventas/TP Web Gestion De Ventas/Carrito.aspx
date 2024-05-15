@@ -8,7 +8,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <asp:Repeater runat="server" ID="repEliminar">
+    <asp:Repeater runat="server" ID="repCarrito">
         <ItemTemplate>
             <div class="row">
                 <div class="col-md-3 mb-4">

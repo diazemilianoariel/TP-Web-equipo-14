@@ -52,6 +52,7 @@
     </form>
 
     <footer class="footer">
+        <hr />
         <p>&copy;<%:DateTime.Now.Year %> TP Nro 4 PROGRAMACION 3 | MARTIN IBAÑEZ - GONZALO BIANCHINI - EMILIANO DIAZ</p>
 
     </footer>

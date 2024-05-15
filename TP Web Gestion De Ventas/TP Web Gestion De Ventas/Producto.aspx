@@ -13,6 +13,9 @@
         <div class="container">
             <div class="row">
 
+
+
+
                 <asp:Repeater runat="server" ID="repRepetidor">
                     <ItemTemplate>
                         <div class="col-md-3 mb-4 article-card">
@@ -34,6 +37,11 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
+
+
+
+
+
 
             </div>
         </div>
