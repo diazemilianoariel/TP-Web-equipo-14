@@ -24,13 +24,8 @@
                 <a class="nav-link active" aria-current="page" href="Producto.aspx">PRODUCTOS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Pruebas.aspx" >PRUEBAS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Carrito.aspx">VER CARRITO</a>
-            </li>
-            
-            
+                <a class="nav-link active" aria-current="page" href="Carrito.aspx" >VER CARRITO</a>
+            </li>            
             <li>
                 <input id="searchInput" type="search" placeholder="Buscar Producto" aria-label="Search">
             </li>
@@ -42,15 +37,12 @@
             <li></li>
         </ul>
 
-<<<<<<< HEAD
-=======
         <%--<form role="search">
             <input id="searchInput" class="border-black form-control" type="search" placeholder="Buscar por nombre" aria-label="Search">
         </form>--%>
 
         <%--<asp:Label CssClass="contador" ID="contadorCarrito" runat="server" Text="">0</asp:Label>
         <a class="logoCarrito" href="Carrito.aspx"></a>--%>
->>>>>>> rama-segura
 
         <div class="container">
             <hr />

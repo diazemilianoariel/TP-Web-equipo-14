@@ -1,74 +1,77 @@
-﻿using System;
+﻿using DataManager;
+using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DataManager;
-using Dominio;
 
 namespace TP_Web_Gestion_De_Ventas
 {
-    public partial class Carrito : System.Web.UI.Page
+    public partial class Pruebas : System.Web.UI.Page
     {
+        public List<Articulo> articuloList;
+
+
+        public Dictionary<int, int> articuloDictionary = new Dictionary<int, int>
+        {
+            {1, 10},
+            {2, 20},
+            {3, 30}
+        };
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            //prueba datos en session...
-            //listaTotal.DataSource = Session["listaArticulos"];
-            //listaTotal.DataBind();
             if (!IsPostBack)
             {
-                // Cargar la cantidad inicial en el Label solo en la primera carga de la página
-                txtCantidad.Text = "primera carga...";
-                //lblCantidad.Text = "0";
+                ArticuloManager articuloManager = new ArticuloManager();
+                articuloList = articuloManager.Listar();
+                Session.Add("lista_completa", articuloList);
+                Repeater1.DataSource = articuloList;
+                Repeater1.DataBind();
             }
-            //else
-            //{
-            //    txtCantidad.Text = "porqueria...";
-            //}
-            //int cantidad = 1;
-            //lblCantidad.Text = cantidad.ToString();
+            else
+            {
+                articuloList = (List<Articulo>)Session["lista_completa"];
+                //Repeater1.DataSource = articuloList;
+                //Repeater1.DataBind();
+            }
         }
 
-
-        /*
-        protected void btnConfirmarCompra_Click(object sender, EventArgs e)
+        protected void btnSumar_Click1(object sender, EventArgs e)
         {
 
-            Session.Remove("Seleccionados");
+            int id = int.Parse(((Button)sender).CommandArgument);
+            articuloList.Find(x => x.id == id).cantidad++;
 
-            lblMensajeCompra.Text = "Muchas Gracias por su compra";
-            lblMensajeCompra.Visible = true;
-        }
-        */
-        protected void btnSumar_Click(object sender, EventArgs e)
-        {
-            int cant = int.Parse(txtCantidad.Text);
-            //int cant = int.Parse(lblCantidad.Text);
-            cant = cant + 1;
-            txtCantidad.Text = cant.ToString();
-            //lblCantidad.Text = cant.ToString();
-            Response.Redirect(Request.RawUrl);
-            Label1.Text = "Cambiooooo ++++";
+            int cantParcial = articuloList.Find(x => x.id == id).cantidad;
+            decimal price = articuloList.Find(x => x.id == id).precio;
+
+            articuloList.Find(x => x.id == id).subtotal = cantParcial * price;
+
+            Repeater1.DataSource = articuloList;
+            Repeater1.DataBind();
+            Session["lista_completa"] = articuloList;
         }
 
-        protected void btnRestar_Click(object sender, EventArgs e)
+        protected void btnRestar_Click1(object sender, EventArgs e)
         {
-            int cant = int.Parse(txtCantidad.Text);
-            //int cant = int.Parse(lblCantidad.Text);
-            cant = cant - 1;
+            int id = int.Parse(((Button)sender).CommandArgument);
+            if (articuloList.Find(x => x.id == id).cantidad > 0)
+            {
+                articuloList.Find(x => x.id == id).cantidad--;
 
-            txtCantidad.Text = "Prueba";
-            //txtCantidad.Text = cant.ToString();
-            //lblCantidad.Text = cant.ToString();
-            //lblCantidad.Text = "perroooo";
-            Response.Redirect(Request.RawUrl);
-            Label1.Text = "Cambiooooo ----";
-        }
+                int cantParcial = articuloList.Find(x => x.id == id).cantidad;
+                decimal price = articuloList.Find(x => x.id == id).precio;
 
-        protected void btnBorrar_Click(object sender, EventArgs e)
-        {
-            ;
+                articuloList.Find(x => x.id == id).subtotal = cantParcial * price;
+
+                Repeater1.DataSource = articuloList;
+                Repeater1.DataBind();
+                Session["lista_completa"] = articuloList;
+            }
         }
     }
 }
