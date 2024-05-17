@@ -15,42 +15,6 @@ namespace TP_Web_Gestion_De_Ventas
     {
 
         /// <summary>
-        /// lblTotalCarrito control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalCarrito;
-
-        /// <summary>
-        /// btnConfirmarCompra control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmarCompra;
-
-        /// <summary>
-        /// lblMensajeCompra control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensajeCompra;
-
-        /// <summary>
-        /// listaTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView listaTotal;
-
-        /// <summary>
         /// btnSumar control.
         /// </summary>
         /// <remarks>

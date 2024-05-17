@@ -13,7 +13,4 @@
     </div>
 
     <img src="https://resizer.iproimg.com/unsafe/1280x/filters:format(webp)/https://assets.iprofesional.com/assets/jpeg/2021/02/512211.jpeg" alt="Imagen de CELU" class="header-image">
-     
-
-
 </asp:Content>

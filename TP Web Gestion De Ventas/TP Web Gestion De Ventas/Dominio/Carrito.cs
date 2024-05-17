@@ -57,6 +57,7 @@ namespace Dominio
 
         public int cantidadTotal()
         {
+            //todo...
             return items.Count();
         }
     }
