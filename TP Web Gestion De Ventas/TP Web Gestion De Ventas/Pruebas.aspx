@@ -41,7 +41,4 @@
         <asp:Label Text="5" runat="server" ID="lblPrueba" />
         <asp:Button Text="Sumar" CssClass="btn-primary" runat="server" ID="btnSumar" OnClick="btnSumar_Click" />
     </div>--%>
-
-
-
 </asp:Content>

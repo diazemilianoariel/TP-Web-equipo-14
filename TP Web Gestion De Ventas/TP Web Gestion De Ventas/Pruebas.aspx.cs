@@ -27,14 +27,9 @@ namespace TP_Web_Gestion_De_Ventas
             {
                 ArticuloManager articuloManager = new ArticuloManager();
                 articuloList = articuloManager.Listar();
-                //grdListaCompleta.DataSource = articuloList;
-                //grdListaCompleta.DataBind();
                 Session.Add("lista_completa", articuloList);
                 Repeater1.DataSource = articuloList;
                 Repeater1.DataBind();
-                //    grilla.DataSource = articuloList;
-                //    grilla.DataBind();
-                //
             }
             else
             {
@@ -42,30 +37,6 @@ namespace TP_Web_Gestion_De_Ventas
                 //Repeater1.DataSource = articuloList;
                 //Repeater1.DataBind();
             }
-        }
-
-        protected void btnRestar_Click(object sender, EventArgs e)
-        {
-
-            //lblPrueba.Text="PEPE RESTOOOO";
-            //int cantidad = int.Parse(lblPrueba.Text);
-            //if (cantidad <= 0)
-            //    cantidad = 0;
-            //else
-            //    cantidad--;
-            //lblPrueba.Text = cantidad.ToString();
-        }
-
-        protected void btnSumar_Click(object sender, EventArgs e)
-        {
-
-            //lblPrueba.Text="PEPE SUMOOO";
-            //int cantidad = int.Parse(lblPrueba.Text);
-            //if (cantidad >= 99)
-            //    cantidad = 99;
-            //else
-            //    cantidad++;
-            //lblPrueba.Text = cantidad.ToString();
         }
 
         protected void btnSumar_Click1(object sender, EventArgs e)
@@ -89,17 +60,5 @@ namespace TP_Web_Gestion_De_Ventas
                 Session["lista_completa"] = articuloList;
             }
         }
-
-
-
-        //protected void sumarCantidad_Click(object sender, EventArgs e)
-        //{
-        //    int cantidad = int.Parse(lblPrueba.Text);
-        //    if (cantidad >= 99)
-        //        cantidad = 99;
-        //    else
-        //        cantidad++;
-        //    lblPrueba.Text = cantidad.ToString();
-        //} 
     }
 }
