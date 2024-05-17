@@ -28,13 +28,19 @@
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="Carrito.aspx">VER CARRITO</a>
             </li>
+            
+            
+            <li>
+                <input id="searchInput" type="search" placeholder="Buscar Producto" aria-label="Search">
+            </li>
+            
+            <asp:Label CssClass="contador" ID="Label1" runat="server" Text="">0</asp:Label>
+            <a class="logoCarrito" href="Carrito.aspx">
+                <img src="IcoCarrito.png" alt="icono del carrito" Style =" height: 30px"/>
+            </a>
+            <li></li>
         </ul>
 
-        <form role="search">
-            <input id="searchInput" class="border-black form-control" type="search" placeholder="Buscar por nombre" aria-label="Search">
-        </form>
-        <asp:Label CssClass="contador" ID="contadorCarrito" runat="server" Text="">0</asp:Label>
-        <a class="logoCarrito" href="Carrito.aspx">
 
         <div class="container">
             <hr />
@@ -46,6 +52,7 @@
     </form>
 
     <footer class="footer">
+        <hr />
         <p>&copy;<%:DateTime.Now.Year %> TP Nro 4 PROGRAMACION 3 | MARTIN IBAÑEZ - GONZALO BIANCHINI - EMILIANO DIAZ</p>
 
     </footer>

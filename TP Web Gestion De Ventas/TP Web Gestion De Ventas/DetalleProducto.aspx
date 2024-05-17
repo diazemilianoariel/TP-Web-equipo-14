@@ -31,4 +31,12 @@
             <asp:Label ID="Label2" runat="server" Text="codigo:" CssClass="control-label"></asp:Label>
             <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control mx-auto"></asp:TextBox>
         </div>
+
+        <div class="imagen-container">
+            <asp:Repeater runat="server" ID="repRepetidor">
+                <ItemTemplate>
+                    <img src='<%# Container.DataItem %>' alt="Imagen" />
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
 </asp:Content>
