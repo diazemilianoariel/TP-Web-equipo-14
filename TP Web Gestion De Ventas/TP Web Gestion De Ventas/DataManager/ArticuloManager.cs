@@ -34,6 +34,7 @@ namespace DataManager
                     aux.marca.descripcion =(string) datos.Lector["Marca"];
                     aux.categoria=new Categoria();  ////instancio el objeto interno para evitar la null reference
                     aux.categoria.descripcion = (string)datos.Lector["Categoria"];
+                    aux.cantidad = 7;
 
                     if ( !(datos.Lector["ImagenUrl"] is DBNull))
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];

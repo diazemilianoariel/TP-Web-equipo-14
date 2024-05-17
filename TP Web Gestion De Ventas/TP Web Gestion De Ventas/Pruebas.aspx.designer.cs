@@ -15,39 +15,12 @@ namespace TP_Web_Gestion_De_Ventas
     {
 
         /// <summary>
-        /// btnRestar control.
+        /// Repeater1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRestar;
-
-        /// <summary>
-        /// lblPrueba control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrueba;
-
-        /// <summary>
-        /// btnSumar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSumar;
-
-        /// <summary>
-        /// grdListaCompleta control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdListaCompleta;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
     }
 }

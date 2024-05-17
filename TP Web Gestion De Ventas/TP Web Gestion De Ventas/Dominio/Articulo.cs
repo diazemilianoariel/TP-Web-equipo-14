@@ -10,6 +10,7 @@ namespace Dominio
 {
     public class Articulo
     {
+        [DisplayName("Id")]
         public int id { get; set; }
         [DisplayName("Código")]     // son annotations =)
         public string codigo { get; set; }
@@ -28,5 +29,8 @@ namespace Dominio
         public string ImagenUrl {  get; set; }
 
         public List<Imagen> imagenes {  get; set; }
+
+        //variable de prueba...
+        public int cantidad {  get; set; }
     }
 }
