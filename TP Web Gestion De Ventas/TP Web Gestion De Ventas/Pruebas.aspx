@@ -9,10 +9,11 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Artículo</th>
+                <th>ID</th>
+                <th>Articulo</th>
                 <th>Precio Unitario</th>
-                <th>Subtotal</th>
                 <th>Cantidad</th>
+                <th>Subtotal</th>
             </tr>
         </thead>
         <tbody>
@@ -23,11 +24,12 @@
                         <td><%# Eval("Nombre") %></td>
                         <td><%# Eval("Precio") %></td>
                         <td><%#Eval("Cantidad") %></td>
+                        <td><%#Eval("subtotal") %></td>
                         <td>
-                            <div class="btn-group" role="group">
-                                <asp:Button Text="restar" CssClass="btn-primary" runat="server" ID="btnRestar" OnClick="btnRestar_Click1" CommandArgument='<%#Eval("Id") %>' CommandName="restar" />
-                                <asp:Label Text='<%#Eval("Cantidad") %>' runat="server" ID="lblprueba1" />
-                                <asp:Button Text="sumar" CssClass="btn-primary" runat="server" ID="btnSumar" OnClick="btnSumar_Click1" CommandArgument='<%#Eval("Id") %>' CommandName="sumar" />
+                            <div>
+                                <asp:Button Text="-" CssClass="btn btn-primary mb-2" runat="server" ID="btnRestar" OnClick="btnRestar_Click1" CommandArgument='<%#Eval("Id") %>' CommandName="restar" />
+                                <asp:Label Text='<%#Eval("Cantidad") %>' runat="server" ID="lblprueba1" class="display-6"/>
+                                <asp:Button Text="+" CssClass="btn btn-primary mb-2" runat="server" ID="btnSumar" OnClick="btnSumar_Click1" CommandArgument='<%#Eval("Id") %>' CommandName="sumar" />
                             </div>
                         </td>
                     </tr>

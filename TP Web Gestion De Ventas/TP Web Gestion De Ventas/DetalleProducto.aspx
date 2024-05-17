@@ -7,8 +7,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-
     <h1>DETALLE DE PRODUCTO: </h1>
     <div class="container col-7">
         <div class="form-group">
@@ -31,4 +29,5 @@
             <asp:Label ID="Label2" runat="server" Text="codigo:" CssClass="control-label"></asp:Label>
             <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control mx-auto"></asp:TextBox>
         </div>
+    </div>
 </asp:Content>

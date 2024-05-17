@@ -13,6 +13,7 @@ namespace TP_Web_Gestion_De_Ventas
     {
         public List<Articulo> articuloList;
 
+
         public Dictionary<int, int> articuloDictionary = new Dictionary<int, int>
         {
             {1, 10},
@@ -44,6 +45,12 @@ namespace TP_Web_Gestion_De_Ventas
 
             int id = int.Parse(((Button)sender).CommandArgument);
             articuloList.Find(x => x.id == id).cantidad++;
+
+            int cantParcial = articuloList.Find(x => x.id == id).cantidad;
+            decimal price = articuloList.Find(x => x.id == id).precio;
+
+            articuloList.Find(x => x.id == id).subtotal = cantParcial * price;
+
             Repeater1.DataSource = articuloList;
             Repeater1.DataBind();
             Session["lista_completa"] = articuloList;
@@ -55,6 +62,12 @@ namespace TP_Web_Gestion_De_Ventas
             if (articuloList.Find(x => x.id == id).cantidad > 0)
             {
                 articuloList.Find(x => x.id == id).cantidad--;
+
+                int cantParcial = articuloList.Find(x => x.id == id).cantidad;
+                decimal price = articuloList.Find(x => x.id == id).precio;
+
+                articuloList.Find(x => x.id == id).subtotal = cantParcial * price;
+
                 Repeater1.DataSource = articuloList;
                 Repeater1.DataBind();
                 Session["lista_completa"] = articuloList;

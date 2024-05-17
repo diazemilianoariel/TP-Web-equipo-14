@@ -30,7 +30,9 @@ namespace Dominio
 
         public List<Imagen> imagenes {  get; set; }
 
-        //variable de prueba...
+        //variables de prueba...
         public int cantidad {  get; set; }
+
+        public decimal subtotal { get; set; }
     }
 }
