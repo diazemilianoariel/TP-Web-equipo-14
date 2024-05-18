@@ -12,24 +12,39 @@ namespace TP_Web_Gestion_De_Ventas
 {
     public partial class Producto : System.Web.UI.Page
     {
-        public List<Articulo> listaArticulos {  get; set; }
+        public List<Articulo> listaArticulos { get; set; }
+        public Carrito carrito { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloManager articuloManager = new ArticuloManager();
-            listaArticulos = articuloManager.Listar();
+            if (Session["listaArticulo"] != null)   //pregunto si hay algo en el objeto sesion
+            {
+                listaArticulos = (List<Articulo>)Session["listaArticulos"];
+            }
+            else
+            {
+                ArticuloManager articuloManager = new ArticuloManager();
+                listaArticulos = articuloManager.Listar();
+                Session.Add("listaArticulos", listaArticulos);
+            }
+
+            if (Session["carrito"]!=null)   //pregunta si hay algo en el objeto session
+            {
+                carrito = (Carrito)Session["carrito"];
+            }
+            else
+            {
+                carrito=new Carrito();
+                Session.Add("carrito", carrito);
+            } 
+            
             repRepetidor.DataSource = listaArticulos;
             repRepetidor.DataBind();
-
-            Session.Add("listaArticulos", listaArticulos);
-
-            if (!IsPostBack)
-            {
-                repRepetidor.DataSource = listaArticulos;
-                repRepetidor.DataBind();
-            }
-            
         }
 
+        //todo...
+        //sumar cantidad al articulo en cuestion(le pasamos el id por url)
+        //refrescar la cantidad en el dibujo del carrito
+        //GUARDAR LA INFO EN LA SESION!
         protected void btnAgregarAlCarrito_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -60,6 +75,5 @@ namespace TP_Web_Gestion_De_Ventas
             Session["Seleccionados"] = seleccionados;
             Response.Redirect(Request.RawUrl);
         }
-
     }
 }

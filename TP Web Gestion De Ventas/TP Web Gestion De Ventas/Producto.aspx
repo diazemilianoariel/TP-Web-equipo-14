@@ -7,15 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mochiy+Pop+One&display=swap">
     <link href="estilos1.css" rel="stylesheet" />
 
-
-
     <section class="body-def">
         <div class="container">
             <div class="row">
-
-
-
-
                 <asp:Repeater runat="server" ID="repRepetidor">
                     <ItemTemplate>
                         <div class="col-md-3 mb-4 article-card">
@@ -27,7 +21,7 @@
                                     <p class="card-text flex-grow-1"></p>
                                     <p class="card-text">Precio: $ <%# string.Format("{0:0.00}", Eval("Precio")) %></p>
                                     <div class="mt-auto">
-                                        <asp:Button ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CssClass="btn btn-primary mb-2" CommandArgument='<%# Eval("Id") %>' CommandName="ArticuloId" OnClientClick="actualizarContador(); return true;" Style="background-color: #007bff; color: white;" onmouseover="this.style.backgroundColor = '#a732da';" onmouseout="this.style.backgroundColor = '#007bff';" />
+                                        <asp:Button ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CssClass="btn btn-primary mb-2" CommandArgument='<%# Eval("Id") %>' Style="background-color: #007bff; color: white;" onmouseover="this.style.backgroundColor = '#a732da';" onmouseout="this.style.backgroundColor = '#007bff';" />
                                         <button class="btn-Ver-Detalle">
                                             <a href='<%# "DetalleProducto.aspx?id=" + Eval("Id") %>'>Detalle</a>
                                         </button>
@@ -37,12 +31,6 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-
-
-
-
-
-
             </div>
         </div>
     </section>
