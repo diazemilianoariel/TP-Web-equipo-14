@@ -11,38 +11,44 @@ using System.Drawing;
 
 namespace TP_Web_Gestion_De_Ventas
 {
-	public partial class DetalleProducto : System.Web.UI.Page
-	{
+    public partial class DetalleProducto : System.Web.UI.Page
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) 
+            Articulo arti = new Articulo();
+            List<Articulo> listaArticulos = new List<Articulo>();
+            int idProducto = Convert.ToInt32(Request.QueryString["id"]);
+            if (!IsPostBack)
             {
-                
-              
-                    int idProducto = Convert.ToInt32(Request.QueryString["id"]);
 
-                    
+                if (Session["listaArticulos"] == null)
+                {
                     ArticuloManager am = new ArticuloManager();
-                    Articulo art = am.Listar().Find(x => x.id == idProducto);
+                    listaArticulos = am.Listar();
+                    Session.Add("listaArticulos", listaArticulos);
+                }
+                else
+                {
+                    listaArticulos = (List<Articulo>)Session["listaArticulos"];
+                }
 
-                    if (art != null)
-                    {
-                       
-                        txtNombre.Text = art.nombre;
-                        txtDescripcion.Text = art.descripcion;
-                        txtImporte.Text = art.precio.ToString();
-                        TextBox1.Text = art.marca.descripcion;
-                        TextBox2.Text = art.codigo;
+                arti=listaArticulos.Find(x=> x.id == idProducto);
 
-                        
-                        List<string> urls = new List<string>();
-                        urls.Add(art.ImagenUrl);
-                        repRepetidor.DataSource = urls;
-                        repRepetidor.DataBind();
-                    }
-               
-                
-               
+                if (arti != null)
+                {
+
+                    txtNombre.Text = arti.nombre;
+                    txtDescripcion.Text = arti.descripcion;
+                    txtImporte.Text = arti.precio.ToString();
+                    TextBox1.Text = arti.marca.descripcion;
+                    TextBox2.Text = arti.codigo;
+
+
+                    List<string> urls = new List<string>();
+                    urls.Add(arti.ImagenUrl);
+                    repRepetidor.DataSource = urls;
+                    repRepetidor.DataBind();
+                }
             }
         }
 
