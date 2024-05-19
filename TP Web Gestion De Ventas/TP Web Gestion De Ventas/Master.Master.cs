@@ -13,14 +13,18 @@ namespace TP_Web_Gestion_De_Ventas
         Carrito carritox;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["carrito"] == null)
+            //funciona codigo en master?
+            if (!IsPostBack)
             {
-                Label1.Text = "0";
-            }
-            else
-            {
-                carritox = (Carrito)Session["carrito"];
-                Label1.Text = carritox.cantidadTotal().ToString();
+                if (Session["carrito"] == null)
+                {
+                    LabelCarro.Text = "0";
+                }
+                else
+                {
+                    carritox = (Carrito)Session["carrito"];
+                    LabelCarro.Text = carritox.cantidadTotal().ToString();
+                }
             }
         }
     }
