@@ -11,7 +11,7 @@ namespace TP_Web_Gestion_De_Ventas
 {
 
 
-    public partial class Pruebas
+    public partial class Carro
     {
 
         /// <summary>

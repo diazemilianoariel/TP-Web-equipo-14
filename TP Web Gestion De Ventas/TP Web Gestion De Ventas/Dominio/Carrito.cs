@@ -11,7 +11,7 @@ namespace Dominio
     {
         public Dictionary<int, int> items;  //el diccionario sera compuesto por: {id,cantidad ; id,cantidad}
         //public List<Articulo> articulos;
-        public int cant;
+        //public int cant {  get; set; }
 
         public Carrito()    //instancio el diccionario de articulos para ir cargando...
         {
@@ -23,9 +23,9 @@ namespace Dominio
 
         public void sumarAlCarrito(int id_articulo)
         {
-            if (items.ContainsKey(id_articulo))
+            if (items.ContainsKey(id_articulo))     //pregunto si el articulo ya fue cargado al carrito alguna vez
             {
-                items[id_articulo]++;   
+                items[id_articulo]++;
             }
             else
             {
@@ -37,20 +37,27 @@ namespace Dominio
         {
             if (items.ContainsKey(id_articulo))
             {
-                items[id_articulo]--;
-                if (items[id_articulo] == 0)
+                if (items[id_articulo] <= 0)        //si no tiene cantidad, vuela
                 {
                     items.Remove(id_articulo);
+                }
+                else
+                {
+                    items[id_articulo]--;
+                    if (items[id_articulo] == 0)    //si luego de decrementar, no tiene cantidad, vuela
+                    {
+                        items.Remove(id_articulo);
+                    }
                 }
             }
         }
 
         public void borrarDelCarrito(int id_articulo)
         {
-            items.Remove(id_articulo );
+            items.Remove(id_articulo);
         }
 
-        public int cantidad(int id_articulo)
+        public int cantidadDE(int id_articulo)
         {
             return items[id_articulo];
         }
@@ -58,7 +65,12 @@ namespace Dominio
         public int cantidadTotal()
         {
             //todo...
-            return items.Count();
+            int cantidad = 0;
+            foreach(KeyValuePair<int, int> item in items)
+            {
+                cantidad = cantidad + item.Value;
+            }
+            return cantidad;
         }
     }
 }

@@ -21,7 +21,7 @@
                                     <p class="card-text flex-grow-1"></p>
                                     <p class="card-text">Precio: $ <%# string.Format("{0:0.00}", Eval("Precio")) %></p>
                                     <div class="mt-auto">
-                                        <asp:Button ID="btnAgregarAlCarrito" runat="server" Text="Agregar al carrito" OnClick="btnAgregarAlCarrito_Click" CssClass="btn btn-primary mb-2" CommandArgument='<%# Eval("Id") %>' Style="background-color: #007bff; color: white;" onmouseover="this.style.backgroundColor = '#a732da';" onmouseout="this.style.backgroundColor = '#007bff';" />
+                                        <asp:Button Text="Agregar al carrito" CssClass="btn btn-primary mb-2" runat="server" ID="btnAgregarAlCarrito"  OnClick="btnAgregarAlCarrito_Click"  CommandArgument='<%#Eval("Id") %>' Style="background-color: #007bff; color: white;" onmouseover="this.style.backgroundColor = '#a732da';" onmouseout="this.style.backgroundColor = '#007bff';" />
                                         <button class="btn-Ver-Detalle">
                                             <a href='<%# "DetalleProducto.aspx?id=" + Eval("Id") %>'>Detalle</a>
                                         </button>
