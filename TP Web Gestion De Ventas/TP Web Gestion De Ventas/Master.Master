@@ -31,10 +31,10 @@
                 <input id="searchInput" type="search" placeholder="Buscar Producto" aria-label="Search">
             </li>
 
-            <asp:Label CssClass="contador" ID="LabelCarro" runat="server"></asp:Label>
+            <asp:Label CssClass="display-6" ID="LabelCarro" runat="server" ></asp:Label>
             <%--esta es la label cantidad en el carro--%>
             <a class="logoCarrito" href="Carro.aspx">
-                <img src="IcoCarrito.png" alt="icono del carrito" style="height: 30px" />
+                <img src="IcoCarrito.png" alt="icono del carrito" style="height: 50px" />
             </a>
 
             
