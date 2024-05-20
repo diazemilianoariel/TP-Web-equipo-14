@@ -1,21 +1,9 @@
 ﻿/*SECCION NAV*/
-#form1 {
-    text-align: left; /* Alinea el contenido del formulario a la izquierda */
+.buscador {
+    width: 20px;
+    float: left;
 }
 
-.nav {
-    display: inline-block; /* Alinea los elementos de navegación en línea */
-}
-
-#searchInput,
-.contador,
-.logoCarrito {
-    float: left; /* Hace que los elementos floten hacia la izquierda */
-    margin-right: 10px; /* Añade un margen derecho para separar visualmente los elementos */
-}
-
-
-}
 /*SECCION FOOTER*/
 .footer {
     background-color: #16202e;
@@ -30,8 +18,8 @@
 }
 
 container {
-    min-height: 100vh; /*  altura del contenedor al 100% del viewport height */
-    position: relative; /* posición relativa para poder posicionar el footer correctamente */
+    min-height: 100vh; /* Establece la altura mínima del contenedor al 100% del viewport height */
+    position: relative; /* Establece la posición relativa para poder posicionar el footer correctamente */
 }
 
 /*SECCION INICIO - DEFAULT.ASPX*/
@@ -41,4 +29,38 @@ container {
     background-color: gray; /* Color de fondo */
     border-bottom: 5px solid double; /* Línea inferior */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+/*barra buscador */
+.form-control {
+    width: 100%; /* Define el ancho del campo de búsqueda */
+    margin-top: 10px; /* Define la separación superior del campo de búsqueda */
+    margin-left: 0px; /* Define la separación izquierda del campo de búsqueda */
+    /* Otros estilos opcionales */
+    padding: 10px; /* Define el relleno dentro del campo de búsqueda */
+    border-radius: 5px; /* Define la curvatura de los bordes del campo de búsqueda */
+    border: 1px solid #000; /* Define el borde del campo de búsqueda */
+    font-size: 16px; /* Define el tamaño de la fuente del texto dentro del campo de búsqueda */
+}
+
+/*DETALLE PRODUCTOS*/
+.btn-Ver-Detalle {
+    background-color: rgba(255, 219, 51, 0.8);
+    color: #333;
+    border-radius: 99px;
+    font-size: 19px;
+    padding: 1px 10px;
+}
+
+    .btn-Ver-Detalle a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+
+.btn-primary {
+    background-color: rgba(255, 219, 51, 0.8);
+    color: #333;
+    border-radius: 99px;
+    font-size: 19px;
+    padding: 1px 10px;
 }
